@@ -29,3 +29,5 @@ elif [[ $pick == "4" ]] || [[ $pick == 4 ]]; then
     read -p "enter the main domain: " domain
     subfinder -d "$domain" | httpx -o alive.txt && cat alive.txt | gau | waybackurls | hakrawler -d 2  >> urls.txt && cat urls.txt | kxss | grep -E 'CSRF|csrf|token|TOKEN|anti-csrf|Anti-CSRF|anticsrf|AntiCSRF'
 fi
+
+#made by Mr Si13nt
